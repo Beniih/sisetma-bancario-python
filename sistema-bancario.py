@@ -24,7 +24,8 @@ while True:
 
             if valor > 0:
                 saldo += valor
-                extrato += f'Deposito: R$ {valor: .2f}  {datetime.now().strftime('%d/%m/%Y %H:%M')}\n\n'
+                when = datetime.now().strftime('%d/%m/%Y %H:%M')
+                extrato += f'Deposito: R$ {valor: .2f}  {when}\n\n'
             else:
                 print("Operação falhou! O valor informado é inválido. Tente novamente!")
         case "s":
@@ -38,7 +39,8 @@ while True:
                 print("Operação falhou! Número de saques foi excedido.")
             elif valor > 0:
                 saldo -= valor
-                extrato += f'Saque: R$ {valor: .2f}  {datetime.now().strftime('%d/%m/%Y %H:%M')}\n\n'
+                when = datetime.now().strftime('%d/%m/%Y %H:%M')
+                extrato += f'Saque: R$ {valor: .2f}  {when)}\n\n'
                 saques_do_dia += 1
             else:
                 print("Operação falhou! O valor informado é inválido.")
