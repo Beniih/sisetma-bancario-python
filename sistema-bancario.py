@@ -43,7 +43,7 @@ while True:
                 extrato += f'Saque: R$ {valor: .2f}  {when}\n\n'
                 saques_do_dia += 1
             else:
-                print("Operação falhou! O valor informado é inválido.")
+                print("!!! Operação falhou! O valor informado é inválido.\n")
         case "e":
             print("\n================ EXTRATO ================")
             print("Não foram realizadas movimentações." if not extrato else extrato)
@@ -52,4 +52,4 @@ while True:
         case "q":
             break
         case _:
-            print("Operação inválida, por favor selecione novamente a operação desejada.")
+            print("\nOperação inválida, por favor selecione novamente a operação desejada.\n")
